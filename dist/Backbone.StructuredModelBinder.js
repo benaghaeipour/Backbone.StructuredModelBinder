@@ -1,3 +1,18 @@
+// Backbone.StructuredModelBinder v0.0.1
+//
+// Copyright (c) 2012 Benjamin Aghaeipour
+// Distributed under MIT License
+
+
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+      // AMD. Register as an anonymous module.
+      define(['underscore', 'jquery', 'backbone'], factory);
+  } else {
+      // Browser globals
+      factory(_, $, Backbone);
+  }
+}(function(_, $, Backbone){
 /*jshint debug:true */
 Backbone.StructuredModelBinder = (function(_, $, Backbone){
 
@@ -193,3 +208,5 @@ Backbone.StructuredModelBinder = (function(_, $, Backbone){
 
   return ModelBinder;
 }(_, $, Backbone));
+ return Backbone.StructuredModelBinder;
+}));
